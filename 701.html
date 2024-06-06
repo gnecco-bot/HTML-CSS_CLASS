@@ -1,0 +1,105 @@
+adjacente, general/pseudo-classe (pré ações/ações)
+tag em seguida de 2 pontos no css mexe na area do pseudo
+podendo ter varias modificações de ações pré tomadas
+adjacente exemplo: div + p{} 
+retorna o valor primeiro valor da tag
+general exemplo: div ~ p{}
+retorna todos os valores dentro da tag
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            color: initial;
+            margin-left: 20px;
+        }
+        .pai .filha{
+            color: red;
+        }
+        [selected]:hover{
+            color: aqua;
+            background-color: red;
+        }
+        [selected]{
+            transition: all 450ms ease-in-out;
+        }
+        a {
+            color: darkorange
+        }
+        a:link{
+            color: deeppink
+        }
+        a:visited{
+            color: firebrick;
+        }
+        a:hover{
+            background: darkslateblue;
+            color: white;
+            text-decoration: none;
+        }
+        input:focus{
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+            border: 1px solid black;
+            outline: none;
+        }
+        input:enabled{
+            background-color: darkolivegreen;
+            /* cursor: not-allowed; */
+        }
+        input:checked + p{
+            background-color: red;
+        }
+        input:not(:checked) + p{
+            background-color: darkgreen;
+        }
+        p:not(.meio){
+            background-color: pink;
+        }
+        .a{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="error">
+    <input type="text" enabled>
+    <input type="checkbox">
+    <p>lorem </p>
+    <div class="pai">
+        pai
+        <div class="filha">
+            filha
+            <div class="filha ">
+                filha da filha        
+            </div>
+        </div>
+        <div class="filha">
+            filha
+            <div class="filha" selected>
+                filha da filha
+            </div>
+        </div>
+    </div>
+    <p>Lorem ipsum <a href="#">dolor</a> sit, amet consectetur adipisicing elit. Voluptatibus, provident adipisci blanditiis fuga possimus explicabo nihil et, nesciunt modi fugit atque. Ad et deserunt,<a href="aaa">dolor</a> dolorem eveniet magnam ipsam nam. Iure!</p>
+    <input type="checkbox">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae adipisci omnis rem! Consequuntur commodi deserunt reiciendis, inventore laborum voluptatibus suscipit, dolorum nostrum adipisci fugit eos aliquid. Maxime quae eos consequuntur.</p>
+    <p class="meio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae adipisci omnis rem! Consequuntur commodi deserunt reiciendis, inventore laborum voluptatibus suscipit, dolorum nostrum adipisci fugit eos aliquid. Maxime quae eos consequuntur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae adipisci omnis rem! Consequuntur commodi deserunt reiciendis, inventore laborum voluptatibus suscipit, dolorum nostrum adipisci fugit eos aliquid. Maxime quae eos consequuntur.</p>
+    <h5 class="a">adjacente, general/pseudo-classe (pré ações/ações)
+        tag em seguida de 2 pontos no css mexe na area do pseudo
+        podendo ter varias modificações de ações pré tomadas
+        adjacente exemplo: div + p{} 
+        retorna o valor primeiro valor da tag
+        general exemplo: div ~ p{}
+        retorna todos os valores dentro da tag
+    </h5>
+</body>
+</html>
