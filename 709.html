@@ -1,0 +1,69 @@
+<!-- pseudo-elementos
+Especificidade diz sobre a prioridade de quem será lido e executado
+
+s  tyle   | ID  | Classes, atributos, pseudos-classes| Elementos, pseudos-elementos
+1           0     0                                    0
+0           1     9                                    0
+0           0     1                                    0
+0           0     0                                    1
+
+!important = tenta priorizar o codigo a ser lido
+
+Exemplo:
+l li::after{
+    content: ' - '; !important
+    background: red;
+    color: white; 
+}
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body#b.bclass p#p.p {
+            background-color: purple;
+        }
+        ul li::after{
+            content: ' - ';
+            background: red;
+            color: white; 
+        }
+        p::first-letter{
+            font-size: 80px;
+            display: block;
+            float: left;
+            margin: 0 10px 0px 0;
+        }
+        p{
+            font-size: 25px;
+        }
+        p::first-line{
+            background-color: aqua;
+        }
+        p::selection{
+            background-color: black;
+            color: white;
+        }
+        ::placeholder{
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <p id="p" class="p">
+        <input type="text" name="" id="" placeholder="Digite alguma coisa:">
+    </p>
+    <p id="b" class="bclass">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel deserunt fugiat consequatur assumenda accusantium eos aut dignissimos beatae rerum eius aliquid neque doloremque, doloribus, harum asperiores perspiciatis minima ea ullam.. Dicta alias labore, dolor commodi provident error aut exercitationem deserunt? Voluptas, quibusdam? Blanditiis aperiam officiis ex magnam, soluta eius architecto deleniti culpa?
+    </p>
+    <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+</body>
+</html>
