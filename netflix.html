@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        body{
+            background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/dd4dfce3-1a39-4b1a-8e19-b7242da17e68/abe2803b-1256-4f65-a1bd-7fd4d4ad997c/BR-pt-20240527-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+            background-size: cover;
+        }
+        header{
+            background-color: rgba(0, 0, 0, 0.90);
+        }
+        header div{
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+        header div h1{
+            padding: 15px 0;
+            font-size: 25px;
+        }
+        header div h1 a{
+            color: rgb(235, 57, 66);
+            text-decoration: none;
+        }
+        .content{
+            background-color: rgba(0, 0, 0, 0.88);
+            width: 450px;
+            height: 680px;
+            margin: 115px auto 70px;
+            padding: 48px 78px;
+            color: white;
+            
+        }
+        .content .entrar_texto{
+            font-size: 35px;
+            text-align: left;
+            padding: 20px 30px;
+        }
+        .content #login_email{
+            display: block;
+            padding: 18px 35px ;
+            background-color: rgba(27, 27, 27, 0.7);
+            border: 2px solid rgb(105, 105, 105);
+            margin: 15px auto;
+            font-size: 25px;
+            color: white;
+        }
+        .content .botao{
+            padding: 20px 30px;
+            text-align: center;
+        }
+        .content .botao .entrar{
+            display: block;
+            width: 350px;
+            padding: 15px 0px;
+            margin: 15px auto 30px auto;
+            background: rgb(255, 0, 0);
+            border: 1px solid red;
+            color: white;
+            font-size: 15px;
+            cursor: pointer
+        }
+        .content .botao .entrar:hover{
+            transition: all 150ms;
+            background: rgba(255, 0, 0, 0.800);
+            border: 1px solid rgba(255, 0, 0, 0);
+        }
+        .content .botao .entrar:active{
+            background: rgba(255, 0, 0, 0.650);
+            color: rgba(255, 255, 255, 0.750);
+        }
+        .content .botao .codigo{
+            display: block;
+            width: 350px;
+            padding: 15px 0px;
+            margin: 30px auto;
+            background: rgb(100, 97, 97);
+            border: 1px solid rgb(100, 97, 97);
+            color: white;
+            font-size: 15px;
+            cursor: pointer
+        }
+        .content .botao .codigo:hover{
+            transition: all 150ms;
+            background: rgba(100, 97, 97, 0.800);
+            border: 1px solid rgba(255, 0, 0, 0);
+        }
+        .content .botao .codigo:active{
+            background: rgba(100, 97, 97, 0.650);
+            color: rgba(255, 255, 255, 0.750);
+        }
+        .content .esqueceu_senha{
+            text-decoration: none;
+            color: white;
+        }
+        .content .esqueceu_senha:hover{
+            text-decoration: underline;
+            color: rgba(255, 255, 255, 0.685);
+        }
+        .content .end_login{
+            padding: 10px 35px;
+        }
+        .content .lembrar_senha{
+            cursor: pointer;
+            display: flex;
+        }
+        .content .end_login .lembrar{
+            height: 16px;
+            width: 16px;
+            margin: 0 10px 0 0;
+        }
+        .content .end_login .lembra:checked{ /* tentar resolver */
+            background-color: rgb(255, 0, 0);
+            width: 25px;
+            height: 25px;
+        }
+        .content .end_login .novo_por_aqui{
+            padding: 18px 0 15px 0;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .content .end_login .novo_por_aqui .assinar{
+            text-decoration: none;
+            color: white;
+        }
+        .content .end_login .novo_por_aqui .assinar:hover{
+            text-decoration: underline;
+        }
+        .content .end_login .protegida_robo{
+            font-size: 12.5px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+        .content .end_login .saiba_mais{
+            text-decoration: none;
+            color: #0071eb;
+        }
+        .content .end_login .saiba_mais:hover{
+            text-decoration: underline;
+        }
+        .content .end_login .saiba_mais:visited{
+            color: #53a4fa;
+        }
+        .rodape {
+            background: black;
+            height: 300px;
+            width: auto;
+        }
+        .rodape .conteudo{
+            padding: 60px 30px 15px 30px;
+        }
+        .rodape .conteudo .duvida{
+            color: white;
+            margin: 0 50px;
+        }
+        .rodape .conteudo .diversos{
+            display: flex;
+        }
+        .rodape .conteudo .diversos a{
+            color: white;
+            margin: 40px 50px;
+        }
+        .rodape .conteudo .lang{
+            margin: 15px 48px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1 class="netflix">
+                <a href="#">NETFLIX</a>
+            </h1>
+            <h1 class="menu">
+                <a href="#"></a>
+            </h1>
+        </div>
+    </header>
+    <div class="content">
+        <p class="entrar_texto">Entrar</p>
+        <input type="text" name="" id="login_email" placeholder="Email ou número de celular">
+        <input type="text" name="" id="login_email" placeholder="Senha">
+        <div class="botao">
+            <button type="submit" class="entrar">Entrar</button>
+            <p>OU</p>
+            <button type="submit" class="codigo">Usar um código de acesso</button>
+            <a href="#" class="esqueceu_senha">Esqueceu a senha?</a>
+        </div>
+        <footer class="end_login">
+            <div class="lembrar_senha">
+                <input type="checkbox" name="" id="lembra" class="lembrar" checked>
+                <label for="lembra">Lembrar-se de mim</label>
+            </div>
+            <div class="novo_por_aqui">
+                <p>Novo por aqui? <a href="#" class="assinar"> Assine agora.</a></p>
+            </div>
+            <div class="protegida_robo">
+                <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a href="#" class="saiba_mais">Saiba Mais.</a></p>
+            </div>
+        </footer>
+    </div>
+    <footer class="rodape">
+        <div class="conteudo">
+            <div class="duvida">
+                <p>Dúvidas? Ligue 0800 591 2876</p>
+            </div>
+            <div class="diversos">
+                <a href="#">Perguntas frequentes</a>
+                <a href="#">Central de Ajuda</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Privacidade</a>
+                <a href="#">Preferências de cookies</a>
+                <a href="#">Informações corporativas</a>
+            </div>
+            <div class="lang">
+                <label for="idioma"></label>
+                <select name="" id="idioma">
+                    <option value="Portugues">Português</option>
+                    <option value="Ingles">Inglês</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
