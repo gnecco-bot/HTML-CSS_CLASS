@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .pai{
+            height: 150vh;
+        }
+        .filha1, .filha2, .filha3, .filha4{
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            position: static;
+        }
+        .filha4{
+            background-color: aqua;
+            position: fixed;
+            top: 10%;
+            right: 0;
+        }
+        .filha3{
+            position: relative;
+            background-color: blue;
+            z-index: 3;
+            top: 30px;
+        }
+        .filha2 {
+            position: static;
+            background-color: greenyellow;
+            z-index: -1;
+        }
+        .filha1 {
+            background-color: rgba(255, 0, 0, 0.644);
+            position: absolute;
+            top: 110%;
+            margin-top: -150px;
+            left: 50%;
+            margin-left: -150px;
+            z-index: 2;
+            font-size: 25px;
+            color: white;
+        }
+        .outra{
+            position: absolute;
+            font-size: 50px;
+            background-color: #fff;
+            top: 50%;
+            margin-top: -29px;
+            left: 50%;
+            margin-left: -45.7px;
+        }
+        ul {
+            height: 100px;
+            overflow-y: auto;
+        }
+        ul li.sticky{
+            background-color: gray;
+            position: sticky;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="pai">
+        <div class="filha1">ABSOLUTO</div>
+        <ul>
+            <li class="sticky">A</li>
+            <li>a</li>
+            <li>a</li>
+            <li>a</li>
+            <li>a</li>
+            <li>a</li>
+            <li class="sticky">B</li>
+            <li>b</li>
+            <li>b</li>
+            <li>b</li>
+            <li>b</li>
+            <li>b</li>
+            <li>b</li>
+            <li class="sticky">C</li>
+            <li>c</li>
+            <li>c</li>
+            <li>c</li>
+            <li>c</li>
+            <li>c</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem optio nulla sed eveniet ipsum non tempora, quibusdam quos iure quo maiores, vitae dolor in. Voluptatibus obcaecati laboriosam veniam natus recusandae.</p>
+        <div class="filha2">ESTATICO</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatum dolores a ad modi tenetur totam dolorum sequi perspiciatis. Vel placeat provident iusto tenetur ratione odit vitae, quidem atque facere.</p>
+        <div class="filha3">RELATIVO
+            <div class="outra">teste</div>
+        </div>
+        <div class="filha4">FIXED</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti velit magnam atque excepturi, sunt vitae odit obcaecati blanditiis odio quam quo modi at. Tenetur quaerat ex molestiae iusto adipisci doloribus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti velit magnam atque excepturi, sunt vitae odit obcaecati blanditiis odio quam quo modi at. Tenetur quaerat ex molestiae iusto adipisci doloribus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti velit magnam atque excepturi, sunt vitae odit obcaecati blanditiis odio quam quo modi at. Tenetur quaerat ex molestiae iusto adipisci doloribus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti velit magnam atque excepturi, sunt vitae odit obcaecati blanditiis odio quam quo modi at. Tenetur quaerat ex molestiae iusto adipisci doloribus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti velit magnam atque excepturi, sunt vitae odit obcaecati blanditiis odio quam quo modi at. Tenetur quaerat ex molestiae iusto adipisci doloribus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti velit magnam atque excepturi, sunt vitae odit obcaecati blanditiis odio quam quo modi at. Tenetur quaerat ex molestiae iusto adipisci doloribus.</p>
+    </div>
+</body>
+</html>
