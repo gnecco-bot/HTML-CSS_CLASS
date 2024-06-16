@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-size: 20px;
+        }
+        p {
+            margin: 0 0 24px;
+        }
+        .two-columns{
+            display: flex;
+        }
+        .two-columns .col {
+            display: flex;
+            flex-direction: column;
+            background-color: lawngreen;
+            margin: 15px;
+            padding: 30px;
+        }
+        .gallery {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .gallery .img {
+            flex: 1 0 20%;
+            height: 50px;
+            background-color: blue;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="two-columns">
+        <div class="col">
+            <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime facere pariatur eaque quae minus fugiat cumque earum possimus nulla asperiores laboriosam harum, similique nam quisquam praesentium. Natus adipisci officia quia.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, ut quas, architecto explicabo dolore quasi magnam harum laboriosam sunt blanditiis aperiam saepe, eius fugiat modi? Explicabo tempore incidunt quaerat facere.
+            </p>
+        </div>
+        <div class="col">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, ut quas, architecto explicabo dolore quasi magnam harum laboriosam sunt blanditiis aperiam saepe, eius fugiat modi? Explicabo tempore incidunt quaerat facere.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, ut quas, architecto explicabo dolore quasi magnam harum laboriosam sunt blanditiis aperiam saepe, eius fugiat modi? Explicabo tempore incidunt quaerat facere.</p>
+            <div class="gallery">
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

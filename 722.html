@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .flex-container {
+            display: flex;
+            background-color: yellow;
+            flex-direction: row;
+            justify-content: center; /* main direcionamento em relação a flex-direction */
+            align-items: flex-start; /* eixo oposto ao flex-direction */
+            height: 500px;
+            flex-wrap: wrap;
+            padding: 1px;
+        }
+        .flex-item {
+            color: #fff;
+            background-color: red;
+            /* width: 19%; */
+            margin: 0.20%;
+            flex-grow: 1; /* permitir espaçamento sobrando para dividir e preencher, quão maior o numeor, maior preenchimento exclusivo a ele*/
+            flex: 1 0 19%;
+        }
+        .flex-item:nth-child(3){
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">um</div>
+        <div class="flex-item">dois</div>
+        <div class="flex-item">tres</div>
+        <div class="flex-item">quatro</div>
+        <div class="flex-item">cinco</div>
+        <div class="flex-item">um</div>
+        <div class="flex-item">dois</div>
+        <div class="flex-item">tres</div>
+        <div class="flex-item">quatro</div>
+        <div class="flex-item">cinco</div>
+        <div class="flex-item">um</div>
+        <div class="flex-item">dois</div>
+        <div class="flex-item">tres</div>
+        <div class="flex-item">quatro</div>
+        <div class="flex-item">cinco</div>
+        <div class="flex-item">um</div>
+        <div class="flex-item">dois</div>
+        <div class="flex-item">tres</div>
+        <div class="flex-item">quatro</div>
+        <div class="flex-item">cinco</div>
+    </div>
+</body>
+</html>
