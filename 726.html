@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: sans-serif;
+            font-size: 40px;
+        }
+        .grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* especifica quantas grid aparece ne coluna */
+            /* grid-template-columns: repeat(3, 1fr); */
+            /* grid-template-rows: 1fr; */
+            grid-gap: 10px 30px; /* espaçamento entre as grid */
+        }
+        .grid div{
+            background: tomato;
+            min-height: 100px;
+        }
+        /* .grid div:nth-child(5) {
+            background-color: darkred;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        } */
+        .grid div:nth-child(5) {
+            background-color: darkred;
+            grid-row: span 1;
+            grid-column: span 2;
+        }
+        /* .grid div:nth-child(7) {
+            background-color: greenyellow;
+            grid-row: span 2;
+            grid-column: span 2;
+        } */
+        @media (max-width: 768px) {
+            .grid div:nth-child(5){
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+    </div>
+</body>
+</html>
